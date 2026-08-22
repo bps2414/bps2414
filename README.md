@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=automate.+script.+build.+repeat.;Python+%E2%80%A2+AutoHotkey+%E2%80%A2+Macros;Roblox+Projects+%E2%80%A2+Custom+Tools;Building+with+AI+%26+Logic" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=code.+build.+automate.+repeat.;Python+%E2%80%A2+AutoHotkey+%E2%80%A2+Web;Roblox+Development+%E2%80%A2+Custom+Tools;Automations+%E2%80%A2+Macros+%E2%80%A2+Scripting" alt="Typing SVG" />
 
 <br>
 
-<sub>Automation • Macros • Python • AutoHotkey • Roblox • Web Basics</sub>
+<sub>Automation • Macros • Python • AutoHotkey • Roblox • Web Development</sub>
 
 <br><br>
 
@@ -13,7 +13,7 @@
 <br><br>
 
 <a href="https://discord.com/users/463458936985485314">
-  <img src="https://lanyard.cnrad.dev/api/463458936985485314?theme=dark&bg=0d1117&borderRadius=10px&idleMessage=Probably%20automating%20something" alt="Discord Presence" />
+  <img src="https://img.shields.io/badge/Discord-bpss-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="28" alt="Discord: bpss" />
 </a>
 
 </div>
@@ -37,23 +37,20 @@
 
 ### About (EN)
 
-I build automations, macros, and desktop tools. Most of my work centers on Python scripts, AutoHotkey routines, Roblox, and web basics.
-
-I use AI as a core development tool to speed up execution, structure systems, and turn ideas into working scripts.
+I build automations, desktop macros, custom tools, and web applications. Most of my work centers on Python scripts, AutoHotkey routines, Roblox development, and responsive websites.
 
 - **Stack:** Python, AutoHotkey, HTML, CSS, JavaScript, Git
-- **Focus:** Workflow automation, macros, custom utilities, Roblox
+- **Focus:** Workflow automation, macros, web development, Roblox
 - **Discord:** `bpss`
 
 ---
 
 ### Sobre (PT-BR)
 
-Crio automações, macros e ferramentas para desktop. Meu foco principal envolve scripts em Python, rotinas no AutoHotkey, Roblox e desenvolvimento web básico.
-
-Uso inteligência artificial como ferramenta principal para acelerar o desenvolvimento, estruturar sistemas e transformar ideias em código funcional.
+Desenvolvo automações, macros para desktop, ferramentas personalizadas e aplicações web. Meu foco principal envolve scripts em Python, rotinas no AutoHotkey, desenvolvimento no Roblox e criação de sites.
 
 - **Tecnologias:** Python, AutoHotkey, HTML, CSS, JavaScript, Git
-- **Foco:** Automação de tarefas, macros, utilitários personalizados, Roblox
+- **Foco:** Automação de processos, macros, desenvolvimento web, Roblox
 - **Discord:** `bpss`
+
 
