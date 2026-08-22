@@ -24,12 +24,9 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/AutoHotkey-334455?style=flat-square&logo=autohotkey&logoColor=white" alt="AutoHotkey" />
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=py,ahk,html,css,js,git&theme=dark" alt="Tech Stack" />
+</a>
 
 </div>
 
@@ -52,5 +49,22 @@ Desenvolvo automações, macros para desktop, ferramentas personalizadas e aplic
 - **Tecnologias:** Python, AutoHotkey, HTML, CSS, JavaScript, Git
 - **Foco:** Automação de processos, macros, desenvolvimento web, Roblox
 - **Discord:** `bpss`
+
+---
+
+<div align="center">
+
+<img height="140" src="https://i.pinimg.com/originals/55/67/88/55678857e8d41f1a342d5e99e9c0ca4c.gif" alt="Aesthetic Hacker Gif" />
+
+<br><br>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="600" alt="Terminal Line" />
+
+<br>
+
+<code>code in the dark. automate everything.</code>
+
+</div>
+
 
 
