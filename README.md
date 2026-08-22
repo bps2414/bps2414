@@ -13,7 +13,7 @@
 <br><br>
 
 <a href="https://discord.com/users/463458936985485314">
-  <img src="https://img.shields.io/badge/Discord-bpss-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="28" alt="Discord: bpss" />
+  <img src="https://lanyard.cnrad.dev/api/463458936985485314?theme=dark&bg=0d1117&borderRadius=10px&idleMessage=Probably%20in%20Roblox%20Studio" alt="Discord Presence" />
 </a>
 
 </div>
