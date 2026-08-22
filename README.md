@@ -1,49 +1,59 @@
 <div align="center">
-  <img height="150" src="https://i.pinimg.com/originals/55/67/88/55678857e8d41f1a342d5e99e9c0ca4c.gif"  />
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=automate.+script.+build.+repeat.;Python+%E2%80%A2+AutoHotkey+%E2%80%A2+Macros;Roblox+Projects+%E2%80%A2+Custom+Tools;Building+with+AI+%26+Logic" alt="Typing SVG" />
+
+<br>
+
+<sub>Automation • Macros • Python • AutoHotkey • Roblox • Web Basics</sub>
+
+<br><br>
+
+<img src="https://visitor-badge.laobi.icu/badge?page_id=bps2414.bps2414&left_color=%2318181b&right_color=%238b5cf6" alt="Visitors" />
+
+<br><br>
+
+<a href="https://discord.com/users/463458936985485314">
+  <img src="https://lanyard.cnrad.dev/api/463458936985485314?theme=dark&bg=0d1117&borderRadius=10px&idleMessage=Probably%20automating%20something" alt="Discord Presence" />
+</a>
+
 </div>
 
-###
+---
+
+### Tech & Tools / Tecnologias
 
 <div align="center">
-  <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=bpss&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="discord logo"  />
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/AutoHotkey-334455?style=flat-square&logo=autohotkey&logoColor=white" alt="AutoHotkey" />
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+
 </div>
 
-###
+---
 
-<h1 align="center">salve salve</h1>
+### About (EN)
 
-###
+I build automations, macros, and desktop tools. Most of my work centers on Python scripts, AutoHotkey routines, Roblox, and web basics.
 
-<h3 align="left">👩‍💻  About Me  / Sobre mim</h3>
+I use AI as a core development tool to speed up execution, structure systems, and turn ideas into working scripts.
 
-###
+- **Stack:** Python, AutoHotkey, HTML, CSS, JavaScript, Git
+- **Focus:** Workflow automation, macros, custom utilities, Roblox
+- **Discord:** `bpss`
 
-<p align="left">🧑‍💻 Sobre mim<br><br>Sou Bryan, estudante brasileiro do ensino médio, criando meu caminho na tecnologia.<br><br>Gosto de transformar ideias em projetos reais. Tenho interesse por desenvolvimento web, interfaces bem feitas, automação, produtos digitais e tudo que mistura lógica com criatividade. Ainda estou no começo da minha jornada, mas levo meus projetos a sério e tento melhorar um pouco a cada versão.<br><br>Atualmente estou focado em evoluir como desenvolvedor, organizar melhor meus repositórios, criar um portfólio forte e construir projetos que não sejam só funcionais, mas também agradáveis de usar.<br><br>Meu estilo é mais calmo, noturno e introspectivo. Gosto de música com sentimento, estética melancólica, design limpo e projetos que tenham alguma identidade própria — uma vibe meio madrugada, fone de ouvido, código aberto e ideia presa na cabeça.<br><br>- 🔭 Hoje estou trabalhando no meu portfólio, nos meus projetos web e na melhoria do meu GitHub.<br>- 🌱 Atualmente estou aprendendo frontend, UI/UX, organização de projetos, Git/GitHub e boas práticas de desenvolvimento.<br>- 🎧 No meu tempo livre eu escuto música, jogo, estudo coisas que viram mini obsessões e crio projetos quando uma ideia não sai da cabeça.<br><br>Não quero parecer alguém que sabe tudo.  <br>Quero que meus projetos mostrem que eu aprendo rápido, presto atenção nos detalhes e continuo tentando até algo ficar real.</p>
+---
 
-###
+### Sobre (PT-BR)
 
-<h3 align="left">🛠 Language and tools / Linguagens e Ferramentas</h3>
+Crio automações, macros e ferramentas para desktop. Meu foco principal envolve scripts em Python, rotinas no AutoHotkey, Roblox e desenvolvimento web básico.
 
-###
+Uso inteligência artificial como ferramenta principal para acelerar o desenvolvimento, estruturar sistemas e transformar ideias em código funcional.
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="40" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="40" alt="postgresql logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
-</div>
+- **Tecnologias:** Python, AutoHotkey, HTML, CSS, JavaScript, Git
+- **Foco:** Automação de tarefas, macros, utilitários personalizados, Roblox
+- **Discord:** `bpss`
 
-###
