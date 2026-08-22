@@ -1,12 +1,8 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=code.+build.+automate.+repeat.;Python+%E2%80%A2+AutoHotkey+%E2%80%A2+Web;Roblox+Development+%E2%80%A2+Custom+Tools;Automations+%E2%80%A2+Macros+%E2%80%A2+Scripting" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=550&lines=code.+build.+automate.+repeat.;Python+%E2%80%A2+AutoHotkey+%E2%80%A2+Web;Roblox+Development+%E2%80%A2+Custom+Tools;Automations+%E2%80%A2+Macros+%E2%80%A2+Scripting" alt="Typing SVG" />
 
-<br>
-
-<sub>Automation • Macros • Python • AutoHotkey • Roblox • Web Development</sub>
-
-<br><br>
+<p><sub>Automation • Macros • Python • AutoHotkey • Roblox • Web Development</sub></p>
 
 <img src="https://visitor-badge.laobi.icu/badge?page_id=bps2414.bps2414&left_color=%2318181b&right_color=%238b5cf6" alt="Visitors" />
 
@@ -24,9 +20,17 @@
 
 <div align="center">
 
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=py,ahk,html,css,js,git&theme=dark" alt="Tech Stack" />
-</a>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="Python" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.simpleicons.org/autohotkey/334455" height="40" alt="AutoHotkey" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="HTML5" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="CSS3" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="JavaScript" />
+&nbsp;&nbsp;&nbsp;
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="Git" />
 
 </div>
 
