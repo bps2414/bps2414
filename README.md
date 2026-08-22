@@ -1,5 +1,9 @@
 <div align="center">
 
+<img height="150" src="https://i.pinimg.com/originals/55/67/88/55678857e8d41f1a342d5e99e9c0ca4c.gif" alt="Game GIF" />
+
+<br><br>
+
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=550&lines=code.+build.+automate.+repeat.;Python+%E2%80%A2+AutoHotkey+%E2%80%A2+Web;Roblox+Development+%E2%80%A2+Custom+Tools;Automations+%E2%80%A2+Macros+%E2%80%A2+Scripting" alt="Typing SVG" />
 
 <p><sub>Automation • Macros • Python • AutoHotkey • Roblox • Web Development</sub></p>
@@ -58,10 +62,6 @@ Desenvolvo automações, macros para desktop, ferramentas personalizadas e aplic
 
 <div align="center">
 
-<img height="140" src="https://i.pinimg.com/originals/55/67/88/55678857e8d41f1a342d5e99e9c0ca4c.gif" alt="Aesthetic Hacker Gif" />
-
-<br><br>
-
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="600" alt="Terminal Line" />
 
 <br>
@@ -69,6 +69,7 @@ Desenvolvo automações, macros para desktop, ferramentas personalizadas e aplic
 <code>code in the dark. automate everything.</code>
 
 </div>
+
 
 
 
