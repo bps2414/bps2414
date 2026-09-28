@@ -1,40 +1,34 @@
 <div align="center">
 
-<img height="150" src="https://i.pinimg.com/originals/55/67/88/55678857e8d41f1a342d5e99e9c0ca4c.gif" alt="Game GIF" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=600&lines=bps+%E2%80%94+design+%26+web+development;Sites+for+local+businesses;React+%E2%80%A2+Next.js+%E2%80%A2+TypeScript;Products%2C+automations+%26+tools" alt="Typing SVG" />
 
-<br><br>
+<p><sub>Web design • Landing pages • Web apps • Automation</sub></p>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=550&lines=code.+build.+automate.+repeat.;Python+%E2%80%A2+AutoHotkey+%E2%80%A2+Web;Roblox+Development+%E2%80%A2+Custom+Tools;Automations+%E2%80%A2+Macros+%E2%80%A2+Scripting" alt="Typing SVG" />
-
-<p><sub>Automation • Macros • Python • AutoHotkey • Roblox • Web Development</sub></p>
-
+<a href="https://bpsstudio.vercel.app/"><img src="https://img.shields.io/badge/portfolio-bpsstudio.vercel.app-8b5cf6?style=flat-square&labelColor=18181b" alt="Portfolio" /></a>
 <img src="https://visitor-badge.laobi.icu/badge?page_id=bps2414.bps2414&left_color=%2318181b&right_color=%238b5cf6" alt="Visitors" />
 
 <br><br>
 
 <a href="https://discord.com/users/463458936985485314">
-  <img src="https://lanyard.cnrad.dev/api/463458936985485314?theme=dark&bg=0d1117&borderRadius=10px&idleMessage=Probably%20in%20Roblox%20Studio" alt="Discord Presence" />
+  <img src="https://lanyard.cnrad.dev/api/463458936985485314?theme=dark&bg=0d1117&borderRadius=10px&idleMessage=Probably%20shipping%20a%20site" alt="Discord Presence" />
 </a>
 
 </div>
 
 ---
 
-### Tech & Tools / Tecnologias
+### Stack
 
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="Python" />
-&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.simpleicons.org/autohotkey/334455" height="40" alt="AutoHotkey" />
-&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="HTML5" />
-&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="CSS3" />
-&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="JavaScript" />
-&nbsp;&nbsp;&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="Git" />
+**Web**<br>
+<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,vite,tailwind,svelte,astro,html,css&theme=dark" alt="Web stack" />
+
+**Backend & infra**<br>
+<img src="https://skillicons.dev/icons?i=nodejs,cloudflare,supabase,postgres,vercel&theme=dark" alt="Backend stack" />
+
+**Automation & desktop**<br>
+<img src="https://skillicons.dev/icons?i=python,dotnet,git,github&theme=dark" alt="Tools" />
 
 </div>
 
@@ -42,34 +36,59 @@
 
 ### About (EN)
 
-I build automations, desktop macros, custom tools, and web applications. Most of my work centers on Python scripts, AutoHotkey routines, Roblox development, and responsive websites.
+I design and build websites for local businesses (barbershops, clinics, law firms, HVAC, solar and more), plus my own products and automation tools. Everything lives on my portfolio: **[bpsstudio.vercel.app](https://bpsstudio.vercel.app/)**.
 
-- **Stack:** Python, AutoHotkey, HTML, CSS, JavaScript, Git
-- **Focus:** Workflow automation, macros, web development, Roblox
+- **Web:** React, Next.js, TypeScript, Vite, Tailwind CSS, Framer Motion
+- **Backend:** Cloudflare Workers, Pages & D1, Hono, Supabase, PostgreSQL, Vercel
+- **Automation:** Python, OCR, FFmpeg, .NET / Avalonia
+- **Discord:** `bpss`
+
+### Sobre (PT-BR)
+
+Desenho e desenvolvo sites para negócios locais (barbearias, clínicas, escritórios de advocacia, climatização, energia solar e outros), além de produtos próprios e ferramentas de automação. Tudo está no portfólio: **[bpsstudio.vercel.app](https://bpsstudio.vercel.app/)**.
+
+- **Web:** React, Next.js, TypeScript, Vite, Tailwind CSS, Framer Motion
+- **Backend:** Cloudflare Workers, Pages e D1, Hono, Supabase, PostgreSQL, Vercel
+- **Automação:** Python, OCR, FFmpeg, .NET / Avalonia
 - **Discord:** `bpss`
 
 ---
 
-### Sobre (PT-BR)
+### Products / Produtos
 
-Desenvolvo automações, macros para desktop, ferramentas personalizadas e aplicações web. Meu foco principal envolve scripts em Python, rotinas no AutoHotkey, desenvolvimento no Roblox e criação de sites.
+| | |
+|---|---|
+| **[Fluxa](https://usefluxa.pages.dev)** | WhatsApp sales CRM: every lead with a next step. React, Cloudflare Workers, Hono, D1. |
+| **[Principium](https://getprincipium.com)** | Visual automation: screen reading, OCR and task queues. Python, .NET/Avalonia, Svelte, Astro. |
+| **[ChamadaFácil](https://github.com/bps2414/chamadafacil)** | Support ticket system. Next.js, TypeScript, Supabase. |
+| **[FaltaOS](https://github.com/bps2414/faltaos)** | School attendance and schedule organizer. React, TypeScript. |
+| **[BPS Fishing Macro](https://github.com/bps2414/bps-fishing-macro)** | Where it all started: my first programming project. Python, OCR. |
 
-- **Tecnologias:** Python, AutoHotkey, HTML, CSS, JavaScript, Git
-- **Foco:** Automação de processos, macros, desenvolvimento web, Roblox
-- **Discord:** `bpss`
+### Client sites / Sites
+
+<div align="center">
+
+[Barbearia da Vila](https://barbeariadavila.vercel.app) •
+[Alpha Barber Club](https://alphabarbearia-livid.vercel.app/) •
+[Dom Lucas](https://domlucasbarber.vercel.app/) •
+[Boca Odontologia](https://bocaodontologia.vercel.app/) •
+[Valença & Prado](https://valencaprado.vercel.app/) •
+[Dra. Marina Castell](https://dra-marina-castell.pages.dev) <br>
+[Brisa Climatização](https://brisaponto.pages.dev) •
+[Paulistar](https://paulistar.vercel.app/) •
+[RefriClima](https://refriclima-servicos.pages.dev) •
+[Hélio Solar](https://helio-solar.pages.dev) •
+[Vértice Vidros](https://vertice-vidros.pages.dev) •
+[Pluma Estofados](https://pluma-estofados.pages.dev) •
+[Xô! Dedetização](https://xo-dedetizacao.pages.dev) •
+[Garra Academia](https://garra-academia.pages.dev)
+
+</div>
 
 ---
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="600" alt="Terminal Line" />
-
-<br>
-
-<code>code in the dark. automate everything.</code>
+<code>design. build. ship. repeat.</code>
 
 </div>
-
-
-
-
