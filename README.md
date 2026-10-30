@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=640&lines=bps+%E2%80%94+I+build+tools+that+ship;PS5+homebrew+%E2%80%A2+Windows+desktop+apps+%E2%80%A2+self-hosted+tools;C%2B%2B+%E2%80%A2+C%23+%E2%80%A2+Python+%E2%80%A2+TypeScript;Websites+for+local+businesses" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=640&lines=bps+%E2%80%94+I+build+tools+that+ship;PS5+homebrew+%E2%80%A2+Windows+desktop+apps+%E2%80%A2+self-hosted+tools;Rust+%E2%80%A2+C%2B%2B+%E2%80%A2+C%23+%E2%80%A2+Python+%E2%80%A2+TypeScript;Websites+for+local+businesses" alt="Typing SVG" />
 
 <p><sub>PS5 homebrew • Windows desktop apps • Self-hosted tools • Automation • Web</sub></p>
 
@@ -30,6 +30,7 @@
 | | | |
 |---|---|:-:|
 | **[feathertune](https://github.com/bps2414/feathertune)** | Lightweight Windows desktop app for a web music player: native title bar, tray, media keys, mini player, synced lyrics, ambient mode, Discord and Last.fm, auto-updates. ~3 MB installer, no Chromium. `Rust` `Tauri 2` | <img src="https://img.shields.io/github/stars/bps2414/feathertune?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
+| **[mdview](https://github.com/bps2414/mdview)** | Tiny native Markdown viewer for Windows: folder sidebar, live reload, light/dark theme. A single ~900 KB exe, no installer. `Rust` `WebView2` | <img src="https://img.shields.io/github/stars/bps2414/mdview?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
 | **[lineup](https://github.com/bps2414/lineup)** | Reorder the PS5 home-screen game row with the controller. Lift a game, carry it, drop it, save. `C++` | <img src="https://img.shields.io/github/stars/bps2414/lineup?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
 | **[ferry](https://github.com/bps2414/ferry)** | Extracts and uploads games to the PS5 over FTP at the same time, never writing them to disk. Windows app or Docker/Linux web server. `C#` | <img src="https://img.shields.io/github/stars/bps2414/ferry?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
 | **[memcard](https://github.com/bps2414/memcard)** | Automatic, versioned backup of PS5 saves to your home server, with a web UI. `Python` | <img src="https://img.shields.io/github/stars/bps2414/memcard?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
