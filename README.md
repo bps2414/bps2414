@@ -30,8 +30,6 @@
 | | | |
 |---|---|:-:|
 | **[feathertune](https://github.com/bps2414/feathertune)** | Lightweight Windows desktop app for a web music player: native title bar, tray, media keys, mini player, synced lyrics, ambient mode, Discord and Last.fm, auto-updates. ~3 MB installer, no Chromium. `Rust` `Tauri 2` | <img src="https://img.shields.io/github/stars/bps2414/feathertune?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[mdview](https://github.com/bps2414/mdview)** | Tiny native Markdown viewer for Windows: folder sidebar, live reload, light/dark theme. A single ~900 KB exe, no installer. `Rust` `WebView2` | <img src="https://img.shields.io/github/stars/bps2414/mdview?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[ps5-updater](https://github.com/bps2414/ps5-updater)** | Windows tray app that keeps PS5 payloads up to date from GitHub releases: paste a repo, it finds the file, verifies SHA-256 and alerts on Discord. Pauses while you play. `Rust` `Slint` | <img src="https://img.shields.io/github/stars/bps2414/ps5-updater?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
 | **[lineup](https://github.com/bps2414/lineup)** | Reorder the PS5 home-screen game row with the controller. Lift a game, carry it, drop it, save. `C++` | <img src="https://img.shields.io/github/stars/bps2414/lineup?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
 | **[ferry](https://github.com/bps2414/ferry)** | Extracts and uploads games to the PS5 over FTP at the same time, never writing them to disk. Windows app or Docker/Linux web server. `C#` | <img src="https://img.shields.io/github/stars/bps2414/ferry?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
 | **[memcard](https://github.com/bps2414/memcard)** | Automatic, versioned backup of PS5 saves to your home server, with a web UI. `Python` | <img src="https://img.shields.io/github/stars/bps2414/memcard?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
@@ -49,6 +47,8 @@
 | **[Principium](https://getprincipium.com)** | Visual automation: screen reading, OCR and task queues. Python, .NET/Avalonia, Svelte, Astro. |
 | **[enxuto](https://github.com/bps2414/enxuto)** · **[clawd-mods](https://github.com/bps2414/clawd-mods)** | Mods for Claude Code: a shorter, colored transcript, and a pixel-art Clawd above the prompt. |
 | **[net-monitor](https://github.com/bps2414/net-monitor)** | Connection monitor for gaming on Starlink: pings every hop, reads the dish telemetry and tells you where the lag comes from. PowerShell, C#. |
+| **[mdview](https://github.com/bps2414/mdview)** | Tiny native Markdown viewer for Windows: folder sidebar, live reload, light/dark theme. A single ~900 KB exe, no installer. Rust, WebView2. |
+| **[ps5-updater](https://github.com/bps2414/ps5-updater)** | Windows tray app that keeps PS5 payloads up to date from GitHub releases: paste a repo, it finds the file, verifies SHA-256 and alerts on Discord. Pauses while you play. Rust, Slint. |
 
 ---
 
