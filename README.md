@@ -48,6 +48,7 @@
 | **[Fluxa](https://usefluxa.pages.dev)** | WhatsApp sales CRM: every lead with a next step. React, Cloudflare Workers, Hono, D1. |
 | **[Principium](https://getprincipium.com)** | Visual automation: screen reading, OCR and task queues. Python, .NET/Avalonia, Svelte, Astro. |
 | **[enxuto](https://github.com/bps2414/enxuto)** · **[clawd-mods](https://github.com/bps2414/clawd-mods)** | Mods for Claude Code: a shorter, colored transcript, and a pixel-art Clawd above the prompt. |
+| **[net-monitor](https://github.com/bps2414/net-monitor)** | Connection monitor for gaming on Starlink: pings every hop, reads the dish telemetry and tells you where the lag comes from. PowerShell, C#. |
 
 ---
 
