@@ -344,6 +344,37 @@ async function tile(p, size, count) {
   return svg.length;
 }
 
+/* ------------------------------------------------------------------ posters */
+
+// The tile's material at a fixed size, as PNG: the README banner (1280×320) and the social preview
+// GitHub shows when the repo link is shared (1280×640, uploaded by hand in Settings). Name and line
+// on basalt at the left, the screenshot at the right, the wave pavement along the bottom.
+async function poster(p, W, H, file) {
+  const big = H >= 600;
+  const s = big ? 10 : 8, STRIP = s * 4, IH = H - STRIP, split = Math.round(W * (big ? 0.47 : 0.5));
+  const r = rng(p.id.length * 131 + H);
+  // Lineup's screen is 16:9 on black, so it sits whole on black instead of being cropped to the slot.
+  const SW = (W - split) * 2;
+  const shot = p.band ? await sharp(path.join(SHOTS, p.shot)).resize(SW, IH * 2, { fit: 'contain', background: '#000' }).toBuffer() : await shotBuffer(p, SW, IH * 2);
+  const uri = await dataUri(shot, SW, IH * 2, 82);
+  const strip = { dark: [], light: [] };
+  for (let x = 0; x < W; x += s) for (let y = IH; y < H; y += s) strip[onda(x * 2.2, (y - IH) * 2.2 + 23) ? 'dark' : 'light'].push(stone(x, y, s, r));
+  const pad = big ? 64 : 40, nameSize = Math.min(big ? 84 : 52, (split - 2 * pad) / width(F.black, p.name, 1)), descSize = big ? 32 : 21, urlSize = big ? 22 : 15;
+  const desc = wrap(F.regular, p.desc, descSize, split - 2 * pad);
+  const block = nameSize + 18 + desc.length * descSize * 1.3;
+  const top = (IH - block) / 2 + nameSize * 0.8 - (big ? 12 : 4);
+  const name = text(F.black, p.name, pad, top, nameSize, C.calcario);
+  const lines = desc.map((l, i) => text(F.regular, l, pad, top + 18 + descSize * 1.15 + i * descSize * 1.3, descSize, C.areia)).join('');
+  const url = text(F.medium, `github.com/bps2414/${p.repo}`, pad, IH - (big ? 44 : 26), urlSize, C.rejunte);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="${C.basalto}"/><image x="${split}" width="${W - split}" height="${IH}" href="${uri}" preserveAspectRatio="xMidYMin slice"/><rect x="${split}" width="3" height="${IH}" fill="${C.basalto3}"/>${name}${lines}${url}<rect y="${IH}" width="${W}" height="${STRIP}" fill="${C.rejunte}"/><path fill="${C.basalto3}" d="${strip.dark.join('')}"/><path fill="${C.calcario}" d="${strip.light.join('')}"/></svg>`;
+  const out = path.join(OUT, file);
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  await sharp(Buffer.from(svg)).png({ compressionLevel: 9, palette: false }).toFile(out);
+  return fs.statSync(out).size;
+}
+
 const sizes = { hero: await hero() };
 for (const [i, p] of PROJECTS.entries()) sizes[p.id] = await tile(p, i < 2 ? 'big' : 'small', await stars(p.repo));
+for (const p of PROJECTS) sizes[`social ${p.id}`] = await poster(p, 1280, 640, `social/${p.id}.png`);
+for (const p of PROJECTS.filter((q) => ['memcard', 'visor'].includes(q.id))) sizes[`banner ${p.id}`] = await poster(p, 1280, 320, `banner/${p.id}.png`);
 for (const [name, n] of Object.entries(sizes)) console.log(`${name.padEnd(12)} ${(n / 1024).toFixed(0)} KB`);
