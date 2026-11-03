@@ -26,8 +26,8 @@ const C = {
 
 const PROJECTS = [
   { id: 'lineup', name: 'Lineup', repo: 'lineup', shot: 'lineup.png', lang: 'C · React', desc: 'Arrange your PS5 home screen with the controller' },
-  { id: 'beatloom', name: 'Beatloom', repo: 'beatloom', shot: 'beatloom.jpg', lang: 'Python', desc: 'Any song in, a playable Beat Saber map out' },
   { id: 'feathertune', name: 'Feathertune', repo: 'feathertune', shot: null, lang: 'Rust', desc: 'Your music, as a real 3 MB Windows app' },
+  { id: 'beatloom', name: 'Beatloom', repo: 'beatloom', shot: 'beatloom.jpg', lang: 'Python', desc: 'Any song in, a playable Beat Saber map out' },
   { id: 'memcard', name: 'Memcard', repo: 'memcard', shot: 'memcard.png', lang: 'Python', desc: 'Versioned PS5 save backups on your server' },
   { id: 'visor', name: 'Visor', repo: 'visor-ps5', shot: 'visor.png', lang: 'C', desc: 'Your Quest 2 on the TV, straight from the PS5' },
 ];
@@ -240,7 +240,7 @@ async function hero() {
   // drops it. Static positions are the final order, so reduced motion shows the end state.
   const TW = 116, TH = 66, GAP = 12, PITCH = TW + GAP;
   const X0 = W - 60 - 5 * TW - 4 * GAP, TY = PAVE + 58;
-  const start = ['beatloom', 'feathertune', 'memcard', 'visor', 'lineup'];
+  const start = [...PROJECTS.slice(1).map((p) => p.id), PROJECTS[0].id];
   const REST = 'translate(0,0) scale(1)', UP = 'translate(0,-4px) scale(1.05)';
   const at = (j) => j * DW, HOLD = DW - 0.45;
   const tiles = [];
@@ -322,11 +322,12 @@ async function tile(p, size, count) {
   const yName = IH + STRIP + (big ? 36 : 31), yDesc = yName + (big ? 26 : 22);
   // The font has no star, so it is drawn: five points, left of the count.
   const shown = count !== null && count >= 10;
-  const langW = width(F.medium, p.lang, 14);
-  const countW = shown ? width(F.medium, fmt(count), 14) : 0;
+  const ms = big ? 14 : 13;
+  const langW = width(F.medium, p.lang, ms);
+  const countW = shown ? width(F.medium, fmt(count), ms) : 0;
   const sx = W - pad - langW - 18 - countW - 18;
-  const star = shown ? `<path fill="${C.areia}" d="${Array.from({ length: 10 }, (_, i) => { const a = (Math.PI / 5) * i - Math.PI / 2, rr = i % 2 ? 2.6 : 6.4; return `${i ? 'L' : 'M'}${(sx + 6.4 + rr * Math.cos(a)).toFixed(1)} ${(yName - 5 + rr * Math.sin(a)).toFixed(1)}`; }).join('')}Z"/>` + text(F.medium, fmt(count), sx + 16, yName, 14, C.areia) : '';
-  const metaSvg = big ? star + text(F.medium, p.lang, W - pad, yName, 14, C.rejunte, { anchor: 'end' }) : '';
+  const star = shown ? `<path fill="${C.areia}" d="${Array.from({ length: 10 }, (_, i) => { const a = (Math.PI / 5) * i - Math.PI / 2, rr = i % 2 ? 2.6 : 6.4; return `${i ? 'L' : 'M'}${(sx + 6.4 + rr * Math.cos(a)).toFixed(1)} ${(yName - 5 + rr * Math.sin(a)).toFixed(1)}`; }).join('')}Z"/>` + text(F.medium, fmt(count), sx + 16, yName, ms, C.areia) : '';
+  const metaSvg = star + text(F.medium, p.lang, W - pad, yName, ms, C.rejunte, { anchor: 'end' });
   const desc = wrap(F.regular, p.desc, descSize, W - 2 * pad).map((l, i) => text(F.regular, l, pad, yDesc + i * (descSize + 6), descSize, C.areia)).join('');
   const label = `${p.name}: ${p.desc}.${count !== null && count >= 10 ? ` ${count} stars.` : ''}`;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${label}"><defs><clipPath id="c"><rect width="${W}" height="${H}" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="${W}" height="${H}" fill="${C.basalto}"/><image width="${W}" height="${IH}" href="${uri}" preserveAspectRatio="xMidYMin slice"/><rect y="${IH}" width="${W}" height="${STRIP}" fill="${C.rejunte}"/><path fill="${C.basalto3}" d="${strip.dark.join('')}"/><path fill="${C.calcario}" d="${strip.light.join('')}"/>${text(F.semi, p.name, pad, yName, nameSize, C.calcario)}${metaSvg}${desc}</g></svg>`;

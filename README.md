@@ -8,10 +8,10 @@
 
 <p align="center">
   <a href="https://github.com/bps2414/lineup"><img src="assets/tile-lineup.svg" width="410" alt="Lineup: arrange your PS5 home screen with the controller" /></a>
-  <a href="https://github.com/bps2414/beatloom"><img src="assets/tile-beatloom.svg" width="410" alt="Beatloom: any song in, a playable Beat Saber map out" /></a>
+  <a href="https://github.com/bps2414/feathertune"><img src="assets/tile-feathertune.svg" width="410" alt="Feathertune: your music, as a real 3 MB Windows app" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/bps2414/feathertune"><img src="assets/tile-feathertune.svg" width="272" alt="Feathertune: your music, as a real 3 MB Windows app" /></a>
+  <a href="https://github.com/bps2414/beatloom"><img src="assets/tile-beatloom.svg" width="272" alt="Beatloom: any song in, a playable Beat Saber map out" /></a>
   <a href="https://github.com/bps2414/memcard"><img src="assets/tile-memcard.svg" width="272" alt="Memcard: versioned PS5 save backups on your server" /></a>
   <a href="https://github.com/bps2414/visor-ps5"><img src="assets/tile-visor.svg" width="272" alt="Visor: your Quest 2 on the TV, straight from the PS5" /></a>
 </p>
