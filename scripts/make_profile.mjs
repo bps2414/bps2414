@@ -25,7 +25,7 @@ const C = {
 };
 
 const PROJECTS = [
-  { id: 'lineup', name: 'Lineup', repo: 'lineup', shot: 'lineup.png', lang: 'C · React', desc: 'Arrange your PS5 home screen with the controller' },
+  { id: 'lineup', name: 'Lineup', repo: 'lineup', shot: 'lineup.png', band: [18, 500], lang: 'C · React', desc: 'Arrange your PS5 home screen with the controller' },
   { id: 'feathertune', name: 'Feathertune', repo: 'feathertune', shot: null, lang: 'Rust', desc: 'Your music, as a real 3 MB Windows app' },
   { id: 'beatloom', name: 'Beatloom', repo: 'beatloom', shot: 'beatloom.jpg', lang: 'Python', desc: 'Any song in, a playable Beat Saber map out' },
   { id: 'memcard', name: 'Memcard', repo: 'memcard', shot: 'memcard.png', lang: 'Python', desc: 'Versioned PS5 save backups on your server' },
@@ -140,7 +140,16 @@ function feathertuneArt(w, h) {
   });
   return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><defs><radialGradient id="g" cx=".8" cy=".1" r="1"><stop offset="0" stop-color="#7B6CF0"/><stop offset=".55" stop-color="#3B2F9E"/><stop offset="1" stop-color="#17133F"/></radialGradient></defs><rect width="${w}" height="${h}" fill="url(#g)"/>${mark}${words.join('')}</svg>`);
 }
-const shotBuffer = (p, w, h) => (p.shot ? fs.readFileSync(path.join(SHOTS, p.shot)) : feathertuneArt(w, h));
+// `band` keeps rows [top, top + height] of a screenshot whose bottom matters (Lineup's "13"), widened
+// to 2:1 with its own black so nothing is cut.
+async function shotBuffer(p, w, h) {
+  if (!p.shot) return feathertuneArt(w, h);
+  const file = path.join(SHOTS, p.shot);
+  if (!p.band) return fs.readFileSync(file);
+  const { width: sw } = await sharp(file).metadata();
+  const [top, bh] = p.band, pad = Math.max(0, Math.round((2 * bh - sw) / 2));
+  return sharp(file).extract({ left: 0, top, width: sw, height: bh }).extend({ left: pad, right: pad, background: '#000' }).toBuffer();
+}
 
 async function stars(repo) {
   const headers = { 'User-Agent': 'bps2414-profile', ...(process.env.GITHUB_TOKEN && { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }) };
@@ -246,7 +255,7 @@ async function hero() {
   const tiles = [];
   for (const [slot, p] of PROJECTS.entries()) {
     const from = start.indexOf(p.id);
-    const uri = await dataUri(await sharp(shotBuffer(p, TW * 2, TH * 2)).toBuffer(), TW * 2, TH * 2);
+    const uri = await dataUri(await shotBuffer(p, TW * 2, TH * 2), TW * 2, TH * 2);
     const x = X0 + slot * PITCH;
     const dx = (from - slot) * PITCH;
     const fadeIn = [[2.6 + from * 0.08, { o: 0, t: `translate(${dx}px,8px)` }], [3.1 + from * 0.08, { o: 1, t: `translate(${dx}px,0)`, e: OUT_EASE }]];
@@ -313,7 +322,7 @@ async function tile(p, size, count) {
   const W = big ? 412 : 274, IH = big ? 206 : 140, STRIP = big ? 12 : 10, BAND = big ? 88 : 96;
   const H = IH + STRIP + BAND;
   const r = rng(p.id.length * 97 + 7);
-  const uri = await dataUri(await sharp(shotBuffer(p, W * 2, IH * 2)).toBuffer(), W * 2, IH * 2, 76);
+  const uri = await dataUri(await shotBuffer(p, W * 2, IH * 2), W * 2, IH * 2, 76);
   const s = big ? 6 : 5;
   const strip = { dark: [], light: [] };
   for (let x = 0; x < W; x += s) for (let y = IH; y < IH + STRIP; y += s) strip[onda(x * 3.2, (y - IH) * 3.2 + 23) ? 'dark' : 'light'].push(stone(x, y, s, r));
