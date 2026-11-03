@@ -1,4 +1,4 @@
-<img src="assets/hero.svg" width="100%" alt="bps: Rio de Janeiro, high school student. Homebrew for the PS5, a Beat Saber map maker and small native Windows apps." />
+<img src="assets/hero.svg" width="100%" alt="bps: Rio de Janeiro. I make the things I wanted to exist." />
 
 <p align="center">
   <a href="https://bpsstudio.vercel.app/">Portfolio</a> ·
@@ -20,7 +20,7 @@
 
 ### About
 
-I'm a high school student in Rio de Janeiro. I make the things I wanted to exist: homebrew for a jailbroken PS5, a Beat Saber map maker, and small native Windows apps in Rust. Most projects have a README in English and Portuguese.
+I'm from Rio de Janeiro, and I make the things I wanted to exist. Most projects have a README in English and Portuguese.
 
 I write C, Rust, Python, C# and TypeScript, and ship to the PS5, Windows, Docker and the web.
 
@@ -62,7 +62,7 @@ Case studies are on the [portfolio](https://bpsstudio.vercel.app/).
 
 <br>
 
-Sou estudante do ensino médio no Rio de Janeiro. Faço o que eu queria que existisse: homebrew pra PS5 desbloqueado, um gerador de mapas de Beat Saber e apps nativos pequenos pro Windows em Rust. A maioria dos projetos tem README em português e inglês.
+Sou do Rio de Janeiro e faço o que eu queria que existisse. A maioria dos projetos tem README em português e inglês.
 
 Escrevo em C, Rust, Python, C# e TypeScript, pro PS5, Windows, Docker e web. Se algum projeto te ajudou, uma ★ no repo ajuda muito.
 

@@ -241,8 +241,8 @@ async function hero() {
 
   // The street below: who, where, what, and the row of projects.
   const textIn = k.anim([[2.4, { o: 0, t: 'translateY(6px)' }], [3.0, { o: 1, t: 'translateY(0)', e: OUT_EASE }]]);
-  const head = wrap(F.semi, 'Rio de Janeiro. High school student.', 23, 400).map((l, i) => text(F.semi, l, 60, PAVE + 62 + i * 30, 23, C.calcario)).join('');
-  const body = wrap(F.regular, 'I build homebrew for the PS5, a Beat Saber map maker and small native Windows apps.', 18, 400)
+  const head = wrap(F.semi, 'Rio de Janeiro.', 23, 400).map((l, i) => text(F.semi, l, 60, PAVE + 62 + i * 30, 23, C.calcario)).join('');
+  const body = wrap(F.regular, 'I make the things I wanted to exist.', 18, 400)
     .map((l, i) => text(F.regular, l, 60, PAVE + 98 + i * 26, 18, C.areia)).join('');
 
   // Lineup's gesture: the focus walks to the last game, lifts it, carries it to the front and
@@ -309,7 +309,7 @@ async function hero() {
   const defs = `<clipPath id="frame"><rect width="${W}" height="${H}" rx="18"/></clipPath><clipPath id="calcada"><rect width="${W}" height="${PAVE}"/></clipPath><clipPath id="nome"><path d="${namePath}"/></clipPath><mask id="fora"><rect width="${W}" height="${PAVE}" fill="#fff"/><path fill="#000" d="${namePath}"/></mask>${clips}`
     + `<radialGradient id="mar" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="${C.mar}" stop-opacity=".9"/><stop offset="1" stop-color="${C.mar}" stop-opacity="0"/></radialGradient>`
     + `<linearGradient id="sol"><stop offset="0" stop-color="#FFF8E7" stop-opacity="0"/><stop offset=".5" stop-color="#FFF8E7" stop-opacity=".16"/><stop offset="1" stop-color="#FFF8E7" stop-opacity="0"/></linearGradient>`;
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="bps: Rio de Janeiro, high school student. Homebrew for the PS5, a Beat Saber map maker and small native Windows apps."><style>${css}</style><defs>${defs}</defs><g clip-path="url(#frame)"><rect width="${W}" height="${PAVE}" fill="${C.rejunte}"/>${paveSvg}${plaqueSvg}${sunSvg}<rect y="${PAVE}" width="${W}" height="${H - PAVE}" fill="${C.basalto}"/><rect y="${PAVE}" width="${W}" height="3" fill="${C.basalto3}"/><ellipse class="${glow}" cx="${X0 + TW / 2}" cy="${TY + TH / 2}" rx="${TW}" ry="${TH}" fill="url(#mar)"/><g class="${textIn}">${head}${body}</g>${tiles.sort((a, b) => a.z - b.z).map((t) => t.svg).join('')}${ringSvg}${captions}</g></svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="bps: Rio de Janeiro. I make the things I wanted to exist."><style>${css}</style><defs>${defs}</defs><g clip-path="url(#frame)"><rect width="${W}" height="${PAVE}" fill="${C.rejunte}"/>${paveSvg}${plaqueSvg}${sunSvg}<rect y="${PAVE}" width="${W}" height="${H - PAVE}" fill="${C.basalto}"/><rect y="${PAVE}" width="${W}" height="3" fill="${C.basalto3}"/><ellipse class="${glow}" cx="${X0 + TW / 2}" cy="${TY + TH / 2}" rx="${TW}" ry="${TH}" fill="url(#mar)"/><g class="${textIn}">${head}${body}</g>${tiles.sort((a, b) => a.z - b.z).map((t) => t.svg).join('')}${ringSvg}${captions}</g></svg>`;
   fs.writeFileSync(path.join(OUT, 'hero.svg'), svg);
   return svg.length;
 }
