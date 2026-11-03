@@ -1,0 +1,14 @@
+{
+  "name": "bps2414-profile",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.14.0",
+  "scripts": {
+    "make": "node make_profile.mjs"
+  },
+  "dependencies": {
+    "@fontsource/schibsted-grotesk": "^5.2.5",
+    "opentype.js": "^1.3.4",
+    "sharp": "^0.34.2"
+  }
+}

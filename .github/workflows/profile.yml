@@ -1,0 +1,35 @@
+# Rebuilds the header and the cards every Monday so the star counts don't go stale, and commits
+# only when an image changed.
+name: profile
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+      - name: Build the images
+        working-directory: scripts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          corepack enable
+          pnpm install --frozen-lockfile
+          pnpm make
+      - name: Commit if something changed
+        run: |
+          git diff --quiet -- assets && exit 0
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Atualiza os números do perfil' -- assets
+          git push

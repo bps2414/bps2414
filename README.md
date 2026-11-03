@@ -1,77 +1,38 @@
-<div align="center">
+<img src="assets/hero.svg" width="100%" alt="bps: Rio de Janeiro, high school student. Homebrew for the PS5, a Beat Saber map maker and small native Windows apps." />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&width=640&lines=bps+%E2%80%94+I+build+tools+that+ship;PS5+homebrew+%E2%80%A2+Windows+desktop+apps+%E2%80%A2+self-hosted+tools;Rust+%E2%80%A2+C%2B%2B+%E2%80%A2+C%23+%E2%80%A2+Python+%E2%80%A2+TypeScript;Websites+for+local+businesses" alt="Typing SVG" />
+<p align="center">
+  <a href="https://bpsstudio.vercel.app/">Portfolio</a> ·
+  <a href="https://discord.com/users/463458936985485314">Discord</a> ·
+  <a href="#português">Português</a>
+</p>
 
-<p><sub>PS5 homebrew • Windows desktop apps • Self-hosted tools • Automation • Web</sub></p>
+<p align="center">
+  <a href="https://github.com/bps2414/lineup"><img src="assets/tile-lineup.svg" width="410" alt="Lineup: arrange your PS5 home screen with the controller" /></a>
+  <a href="https://github.com/bps2414/beatloom"><img src="assets/tile-beatloom.svg" width="410" alt="Beatloom: any song in, a playable Beat Saber map out" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/bps2414/feathertune"><img src="assets/tile-feathertune.svg" width="272" alt="Feathertune: your music, as a real 3 MB Windows app" /></a>
+  <a href="https://github.com/bps2414/memcard"><img src="assets/tile-memcard.svg" width="272" alt="Memcard: versioned PS5 save backups on your server" /></a>
+  <a href="https://github.com/bps2414/visor-ps5"><img src="assets/tile-visor.svg" width="272" alt="Visor: your Quest 2 on the TV, straight from the PS5" /></a>
+</p>
 
-<a href="https://bpsstudio.vercel.app/"><img src="https://img.shields.io/badge/portfolio-bpsstudio.vercel.app-8b5cf6?style=flat-square&labelColor=18181b" alt="Portfolio" /></a>
-<img src="https://visitor-badge.laobi.icu/badge?page_id=bps2414.bps2414&left_color=%2318181b&right_color=%238b5cf6" alt="Visitors" />
+<p align="center"><sub>If one of these helped you, a ★ on its repo is the best thanks.</sub></p>
 
-<br><br>
+### About
 
-<a href="https://discord.com/users/463458936985485314">
-  <img src="https://lanyard.cnrad.dev/api/463458936985485314?theme=dark&bg=0d1117&borderRadius=10px&idleMessage=Probably%20building%20something" alt="Discord Presence" />
-</a>
+I'm a high school student in Rio de Janeiro. I make the things I wanted to exist: homebrew for a jailbroken PS5, a Beat Saber map maker, and small native Windows apps in Rust. Most projects have a README in English and Portuguese.
 
-</div>
+I write C, Rust, Python, C# and TypeScript, and ship to the PS5, Windows, Docker and the web.
 
----
+### More
 
-### About / Sobre
-
-**EN:** Rio de Janeiro, Brazil. I make small, polished tools for things I wanted to exist: homebrew apps for a jailbroken PS5, Windows desktop apps in Rust, self-hosted services, desktop automation and the occasional website for a local business. Most projects ship with a Portuguese and an English README.
-
-**PT-BR:** Rio de Janeiro. Faço ferramentas pequenas e bem acabadas pro que eu queria que existisse: homebrew pra PS5 desbloqueado, apps de desktop pro Windows em Rust, serviços self-hosted, automação de desktop e, de vez em quando, site pra negócio local. A maioria dos projetos tem README em português e inglês.
-
----
-
-### Featured / Destaques
-
-| | | |
-|---|---|:-:|
-| **[feathertune](https://github.com/bps2414/feathertune)** | Lightweight Windows desktop app for a web music player: native title bar, tray, media keys, mini player, synced lyrics, ambient mode, Discord and Last.fm, auto-updates. ~3 MB installer, no Chromium. `Rust` `Tauri 2` | <img src="https://img.shields.io/github/stars/bps2414/feathertune?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[lineup](https://github.com/bps2414/lineup)** | Reorder the PS5 home-screen game row with the controller. Lift a game, carry it, drop it, save. `C++` | <img src="https://img.shields.io/github/stars/bps2414/lineup?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[ferry](https://github.com/bps2414/ferry)** | Extracts and uploads games to the PS5 over FTP at the same time, never writing them to disk. Windows app or Docker/Linux web server. `C#` | <img src="https://img.shields.io/github/stars/bps2414/ferry?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[memcard](https://github.com/bps2414/memcard)** | Automatic, versioned backup of PS5 saves to your home server, with a web UI. `Python` | <img src="https://img.shields.io/github/stars/bps2414/memcard?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[visor-ps5](https://github.com/bps2414/visor-ps5)** | Mirror a Meta Quest 2 to the TV straight from the PS5. No PC, nothing to install on the headset. `C++` | <img src="https://img.shields.io/github/stars/bps2414/visor-ps5?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[beatloom](https://github.com/bps2414/beatloom)** | Paste a YouTube link, get a Beat Saber map. Rules and human patterns, runs locally, no model training. `Python` | <img src="https://img.shields.io/github/stars/bps2414/beatloom?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-| **[chamadafacil](https://github.com/bps2414/chamadafacil)** | Support ticketing system with admin panel, auth and urgency levels. [Live](https://chamadafacil.vercel.app). `TypeScript` `Supabase` | <img src="https://img.shields.io/github/stars/bps2414/chamadafacil?style=flat-square&labelColor=18181b&color=8b5cf6&label=%E2%98%85" alt="stars" /> |
-
-<sub>Star counts are live. If something here helped you, a ★ on the repo is the best thanks. / Os números de stars são ao vivo; uma ★ no repo ajuda muito.</sub>
-
-### More / Mais
-
-| | |
-|---|---|
-| **[Fluxa](https://usefluxa.pages.dev)** | WhatsApp sales CRM: every lead with a next step. React, Cloudflare Workers, Hono, D1. |
-| **[Principium](https://getprincipium.com)** | Visual automation: screen reading, OCR and task queues. Python, .NET/Avalonia, Svelte, Astro. |
-| **[enxuto](https://github.com/bps2414/enxuto)** · **[clawd-mods](https://github.com/bps2414/clawd-mods)** | Mods for Claude Code: a shorter, colored transcript, and a pixel-art Clawd above the prompt. |
-| **[net-monitor](https://github.com/bps2414/net-monitor)** | Connection monitor for gaming on Starlink: pings every hop, reads the dish telemetry and tells you where the lag comes from. PowerShell, C#. |
-| **[mdview](https://github.com/bps2414/mdview)** | Tiny native Markdown viewer for Windows: folder sidebar, live reload, light/dark theme. A single ~900 KB exe, no installer. Rust, WebView2. |
-| **[ps5-updater](https://github.com/bps2414/ps5-updater)** | Windows tray app that keeps PS5 payloads up to date from GitHub releases: paste a repo, it finds the file, verifies SHA-256 and alerts on Discord. Pauses while you play. Rust, Slint. |
-
----
-
-### Stack
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=cpp,cs,dotnet,python,rust,ts,js,docker,linux&theme=dark" alt="Languages and platforms" />
-<br>
-<img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,svelte,astro,nodejs&theme=dark" alt="Web" />
-<br>
-<img src="https://skillicons.dev/icons?i=cloudflare,supabase,postgres,vercel,git,github&theme=dark" alt="Backend and infra" />
-
-</div>
-
----
-
-### Web work / Sites
-
-I still build sites for local businesses. Case studies are on the [portfolio](https://bpsstudio.vercel.app/).
+- **[Fluxa](https://usefluxa.pages.dev)**: a WhatsApp sales CRM where every lead has a next step.
+- **[Principium](https://getprincipium.com)**: visual desktop automation with screen reading, OCR and task queues.
+- **[chamadafacil](https://github.com/bps2414/chamadafacil)**: support tickets with an admin panel and urgency levels.
+- **[mdview](https://github.com/bps2414/mdview)**, **[net-monitor](https://github.com/bps2414/net-monitor)**, **[ps5-updater](https://github.com/bps2414/ps5-updater)**, **[enxuto](https://github.com/bps2414/enxuto)**: small tools I use every day.
 
 <details>
-<summary>Client sites</summary>
+<summary>Sites for local businesses</summary>
 
 <br>
 
@@ -90,12 +51,21 @@ I still build sites for local businesses. Case studies are on the [portfolio](ht
 [Xô! Dedetização](https://xo-dedetizacao.pages.dev) •
 [Garra Academia](https://garra-academia.pages.dev)
 
+Case studies are on the [portfolio](https://bpsstudio.vercel.app/).
+
 </details>
 
----
+### Português
 
-<div align="center">
+<details>
+<summary>Sobre mim</summary>
 
-<code>design. build. ship. repeat.</code>
+<br>
 
-</div>
+Sou estudante do ensino médio no Rio de Janeiro. Faço o que eu queria que existisse: homebrew pra PS5 desbloqueado, um gerador de mapas de Beat Saber e apps nativos pequenos pro Windows em Rust. A maioria dos projetos tem README em português e inglês.
+
+Escrevo em C, Rust, Python, C# e TypeScript, pro PS5, Windows, Docker e web. Se algum projeto te ajudou, uma ★ no repo ajuda muito.
+
+</details>
+
+<sub>The header and the cards are generated by [`scripts/make_profile.mjs`](scripts/make_profile.mjs): the calçadão of Copacabana, stone by stone.</sub>
