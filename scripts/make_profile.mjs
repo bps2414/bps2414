@@ -7,7 +7,9 @@
 //
 // Stars come from the GitHub API at build time (GITHUB_TOKEN raises the rate limit). The random
 // numbers are seeded, so a rebuild only changes the files when a number changed.
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import opentype from 'opentype.js';
@@ -140,6 +142,22 @@ function feathertuneArt(w, h) {
   });
   return Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><defs><radialGradient id="g" cx=".8" cy=".1" r="1"><stop offset="0" stop-color="#7B6CF0"/><stop offset=".55" stop-color="#3B2F9E"/><stop offset="1" stop-color="#17133F"/></radialGradient></defs><rect width="${w}" height="${h}" fill="url(#g)"/>${mark}${words.join('')}</svg>`);
 }
+// A recording in shots/<id>.mp4 (already cut to the loop) turns the card's picture into a GIF: cropped to
+// the card from the top, one palette for the clip, and narrower until it fits GIF_MAX. Needs ffmpeg.
+const GIF_MAX = 3.5 * 1024 * 1024;
+function gifUri(file, w, h) {
+  const out = path.join(os.tmpdir(), `card-${path.basename(file, '.mp4')}.gif`);
+  for (const [scale, fps] of [[1, 15], [0.75, 15], [0.75, 12], [0.5, 12], [0.5, 10]]) {
+    const cw = Math.round(w * scale / 2) * 2, ch = Math.round(h * scale / 2) * 2;
+    execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', file, '-filter_complex',
+      `fps=${fps},scale=${cw}:${ch}:force_original_aspect_ratio=increase:flags=lanczos,crop=${cw}:${ch}:0:0,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a:diff_mode=rectangle`,
+      '-loop', '0', out]);
+    const gif = fs.readFileSync(out);
+    if (gif.length <= GIF_MAX) { fs.rmSync(out); return `data:image/gif;base64,${gif.toString('base64')}`; }
+  }
+  throw new Error(`${file}: still above ${GIF_MAX} bytes as a GIF; cut a shorter loop`);
+}
+
 // `band` keeps rows [top, top + height] of a screenshot whose bottom matters (Lineup's "13"), widened
 // to 2:1 with its own black so nothing is cut.
 async function shotBuffer(p, w, h) {
@@ -322,7 +340,8 @@ async function tile(p, size, count) {
   const W = big ? 412 : 274, IH = big ? 206 : 140, STRIP = big ? 12 : 10, BAND = big ? 88 : 96;
   const H = IH + STRIP + BAND;
   const r = rng(p.id.length * 97 + 7);
-  const uri = await dataUri(await shotBuffer(p, W * 2, IH * 2), W * 2, IH * 2, 76);
+  const clip = path.join(SHOTS, `${p.id}.mp4`);
+  const uri = fs.existsSync(clip) ? gifUri(clip, W * 2, IH * 2) : await dataUri(await shotBuffer(p, W * 2, IH * 2), W * 2, IH * 2, 76);
   const s = big ? 6 : 5;
   const strip = { dark: [], light: [] };
   for (let x = 0; x < W; x += s) for (let y = IH; y < IH + STRIP; y += s) strip[onda(x * 3.2, (y - IH) * 3.2 + 23) ? 'dark' : 'light'].push(stone(x, y, s, r));
