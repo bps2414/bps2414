@@ -29,7 +29,7 @@ const C = {
 const PROJECTS = [
   { id: 'lineup', name: 'Lineup', repo: 'lineup', shot: 'lineup.png', band: [18, 500], lang: 'C · React', desc: 'Arrange your PS5 home screen with the controller' },
   { id: 'feathertune', name: 'Feathertune', repo: 'feathertune', shot: null, lang: 'Rust', desc: 'Your music, as a real 3 MB Windows app' },
-  { id: 'glint', name: 'Glint', repo: 'glint', shot: 'glint.png', lang: 'Rust', desc: 'Game clips for Windows, shared to Discord in one click' },
+  { id: 'glint', name: 'Glint', repo: 'glint', shot: 'glint.png', window: true, lang: 'Rust', desc: 'Game clips for Windows, shared to Discord in one click' },
   { id: 'beatloom', name: 'Beatloom', repo: 'beatloom', shot: 'beatloom.jpg', lang: 'Python', desc: 'Any song in, a playable Beat Saber map out' },
   { id: 'memcard', name: 'Memcard', repo: 'memcard', shot: 'memcard.png', lang: 'Python', desc: 'Versioned PS5 save backups on your server' },
   { id: 'visor', name: 'Visor', repo: 'visor-ps5', shot: 'visor.png', lang: 'C', desc: 'Your Quest 2 on the TV, straight from the PS5' },
@@ -383,6 +383,19 @@ async function poster(p, W, H, file) {
   const SW = (W - split) * 2;
   const shot = p.band ? await sharp(path.join(SHOTS, p.shot)).resize(SW, IH * 2, { fit: 'contain', background: '#000' }).toBuffer() : await shotBuffer(p, SW, IH * 2);
   const uri = await dataUri(shot, SW, IH * 2, 82);
+  // An app window is shown whole, floating on the basalt, instead of cropped to the slot.
+  let pic = `<image x="${split}" width="${W - split}" height="${IH}" href="${uri}" preserveAspectRatio="xMidYMin slice"/><rect x="${split}" width="3" height="${IH}" fill="${C.basalto3}"/>`;
+  if (p.window) {
+    const file = path.join(SHOTS, p.shot);
+    const { width: sw, height: sh } = await sharp(file).metadata();
+    const m = big ? 48 : 24, ww = W - split - m, wh = Math.round((ww * sh) / sw);
+    const wx = split, wy = Math.round((IH - wh) / 2), rx = big ? 14 : 8;
+    const win = `data:image/png;base64,${(await sharp(file).resize(ww * 2).png().toBuffer()).toString('base64')}`;
+    pic = `<defs><clipPath id="win"><rect x="${wx}" y="${wy}" width="${ww}" height="${wh}" rx="${rx}"/></clipPath><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="${big ? 18 : 9}" stdDeviation="${big ? 22 : 11}" flood-color="#000" flood-opacity=".55"/></filter></defs>`
+      + `<rect x="${wx}" y="${wy}" width="${ww}" height="${wh}" rx="${rx}" fill="${C.basalto3}" filter="url(#sh)"/>`
+      + `<image x="${wx}" y="${wy}" width="${ww}" height="${wh}" href="${win}" clip-path="url(#win)" preserveAspectRatio="none"/>`
+      + `<rect x="${wx + 0.5}" y="${wy + 0.5}" width="${ww - 1}" height="${wh - 1}" rx="${rx}" fill="none" stroke="#FFFFFF" stroke-opacity=".12"/>`;
+  }
   const strip = { dark: [], light: [] };
   for (let x = 0; x < W; x += s) for (let y = IH; y < H; y += s) strip[onda(x * 2.2, (y - IH) * 2.2 + 23) ? 'dark' : 'light'].push(stone(x, y, s, r));
   const pad = big ? 64 : 40, nameSize = Math.min(big ? 84 : 52, (split - 2 * pad) / width(F.black, p.name, 1)), descSize = big ? 32 : 21, urlSize = big ? 22 : 15;
@@ -392,7 +405,7 @@ async function poster(p, W, H, file) {
   const name = text(F.black, p.name, pad, top, nameSize, C.calcario);
   const lines = desc.map((l, i) => text(F.regular, l, pad, top + 18 + descSize * 1.15 + i * descSize * 1.3, descSize, C.areia)).join('');
   const url = text(F.medium, `github.com/bps2414/${p.repo}`, pad, IH - (big ? 44 : 26), urlSize, C.rejunte);
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="${C.basalto}"/><image x="${split}" width="${W - split}" height="${IH}" href="${uri}" preserveAspectRatio="xMidYMin slice"/><rect x="${split}" width="3" height="${IH}" fill="${C.basalto3}"/>${name}${lines}${url}<rect y="${IH}" width="${W}" height="${STRIP}" fill="${C.rejunte}"/><path fill="${C.basalto3}" d="${strip.dark.join('')}"/><path fill="${C.calcario}" d="${strip.light.join('')}"/></svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="${C.basalto}"/>${pic}${name}${lines}${url}<rect y="${IH}" width="${W}" height="${STRIP}" fill="${C.rejunte}"/><path fill="${C.basalto3}" d="${strip.dark.join('')}"/><path fill="${C.calcario}" d="${strip.light.join('')}"/></svg>`;
   const out = path.join(OUT, file);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   await sharp(Buffer.from(svg)).png({ compressionLevel: 9, palette: false }).toFile(out);
