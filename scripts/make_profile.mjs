@@ -29,6 +29,7 @@ const C = {
 const PROJECTS = [
   { id: 'lineup', name: 'Lineup', repo: 'lineup', shot: 'lineup.png', band: [18, 500], lang: 'C · React', desc: 'Arrange your PS5 home screen with the controller' },
   { id: 'feathertune', name: 'Feathertune', repo: 'feathertune', shot: null, lang: 'Rust', desc: 'Your music, as a real 3 MB Windows app' },
+  { id: 'glint', name: 'Glint', repo: 'glint', shot: 'glint.png', lang: 'Rust', desc: 'Game clips for Windows, shared to Discord in one click' },
   { id: 'beatloom', name: 'Beatloom', repo: 'beatloom', shot: 'beatloom.jpg', lang: 'Python', desc: 'Any song in, a playable Beat Saber map out' },
   { id: 'memcard', name: 'Memcard', repo: 'memcard', shot: 'memcard.png', lang: 'Python', desc: 'Versioned PS5 save backups on your server' },
   { id: 'visor', name: 'Visor', repo: 'visor-ps5', shot: 'visor.png', lang: 'C', desc: 'Your Quest 2 on the TV, straight from the PS5' },
@@ -265,8 +266,9 @@ async function hero() {
 
   // Lineup's gesture: the focus walks to the last game, lifts it, carries it to the front and
   // drops it. Static positions are the final order, so reduced motion shows the end state.
-  const TW = 116, TH = 66, GAP = 12, PITCH = TW + GAP;
-  const X0 = W - 60 - 5 * TW - 4 * GAP, TY = PAVE + 58;
+  const N = PROJECTS.length, GAP = 12, ROW = 5 * 116 + 4 * GAP;
+  const TW = Math.floor((ROW - (N - 1) * GAP) / N), TH = Math.round((TW * 66) / 116), PITCH = TW + GAP;
+  const X0 = W - 60 - N * TW - (N - 1) * GAP, TY = PAVE + 58;
   const start = [...PROJECTS.slice(1).map((p) => p.id), PROJECTS[0].id];
   const REST = 'translate(0,0) scale(1)', UP = 'translate(0,-4px) scale(1.05)';
   const at = (j) => j * DW, HOLD = DW - 0.45;
@@ -292,7 +294,7 @@ async function hero() {
     tiles.push({ z: p.id === 'lineup' ? 1 : 0, svg: `<g class="${cls} pop"><rect x="${x - 1}" y="${TY - 1}" width="${TW + 2}" height="${TH + 2}" rx="9" fill="${C.basalto3}"/><image x="${x}" y="${TY}" width="${TW}" height="${TH}" href="${uri}" clip-path="url(#t${slot})" preserveAspectRatio="xMidYMin slice"/></g>` });
   }
   const clips = PROJECTS.map((_, slot) => `<clipPath id="t${slot}"><rect x="${X0 + slot * PITCH}" y="${TY}" width="${TW}" height="${TH}" rx="8"/></clipPath>`).join('');
-  const far = 4 * PITCH;
+  const far = (N - 1) * PITCH;
   // The focus ring and the sea glow under it: in the intro they do the carry, in the idle they
   // step along the row, slot by slot, and slide back to the front.
   const ringIdle = [], glowIdle = [];
@@ -335,22 +337,27 @@ async function hero() {
 /* ------------------------------------------------------------------ tiles */
 
 // A project card: the screenshot, a strip of the same wave pavement, and the name on basalt.
+const TILE = {
+  big: { W: 412, IH: 206, STRIP: 12, BAND: 88, s: 6, pad: 20, name: 22, desc: 15, yName: 36, yDesc: 26, ms: 14 },
+  mid: { W: 274, IH: 140, STRIP: 10, BAND: 96, s: 5, pad: 16, name: 18, desc: 13, yName: 31, yDesc: 22, ms: 13 },
+  small: { W: 206, IH: 104, STRIP: 8, BAND: 92, s: 4, pad: 14, name: 16, desc: 12, yName: 28, yDesc: 20, ms: 12 },
+};
 async function tile(p, size, count) {
-  const big = size === 'big';
-  const W = big ? 412 : 274, IH = big ? 206 : 140, STRIP = big ? 12 : 10, BAND = big ? 88 : 96;
+  const z = TILE[size];
+  const { W, IH, STRIP, BAND } = z;
   const H = IH + STRIP + BAND;
   const r = rng(p.id.length * 97 + 7);
   const clip = path.join(SHOTS, `${p.id}.mp4`);
   const uri = fs.existsSync(clip) ? gifUri(clip, W * 2, IH * 2) : await dataUri(await shotBuffer(p, W * 2, IH * 2), W * 2, IH * 2, 76);
-  const s = big ? 6 : 5;
+  const s = z.s;
   const strip = { dark: [], light: [] };
   for (let x = 0; x < W; x += s) for (let y = IH; y < IH + STRIP; y += s) strip[onda(x * 3.2, (y - IH) * 3.2 + 23) ? 'dark' : 'light'].push(stone(x, y, s, r));
-  const pad = big ? 20 : 16;
-  const nameSize = big ? 22 : 18, descSize = big ? 15 : 13;
-  const yName = IH + STRIP + (big ? 36 : 31), yDesc = yName + (big ? 26 : 22);
+  const pad = z.pad;
+  const nameSize = z.name, descSize = z.desc;
+  const yName = IH + STRIP + z.yName, yDesc = yName + z.yDesc;
   // The font has no star, so it is drawn: five points, left of the count.
   const shown = count !== null && count >= 10;
-  const ms = big ? 14 : 13;
+  const ms = z.ms;
   const langW = width(F.medium, p.lang, ms);
   const countW = shown ? width(F.medium, fmt(count), ms) : 0;
   const sx = W - pad - langW - 18 - countW - 18;
@@ -393,7 +400,7 @@ async function poster(p, W, H, file) {
 }
 
 const sizes = { hero: await hero() };
-for (const [i, p] of PROJECTS.entries()) sizes[p.id] = await tile(p, i < 2 ? 'big' : 'small', await stars(p.repo));
+for (const [i, p] of PROJECTS.entries()) sizes[p.id] = await tile(p, i < 3 ? 'mid' : 'small', await stars(p.repo));
 for (const p of PROJECTS) sizes[`social ${p.id}`] = await poster(p, 1280, 640, `social/${p.id}.png`);
 for (const p of PROJECTS.filter((q) => ['memcard', 'visor'].includes(q.id))) sizes[`banner ${p.id}`] = await poster(p, 1280, 320, `banner/${p.id}.png`);
 for (const [name, n] of Object.entries(sizes)) console.log(`${name.padEnd(12)} ${(n / 1024).toFixed(0)} KB`);

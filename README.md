@@ -7,13 +7,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/bps2414/lineup"><img src="assets/tile-lineup.svg?v=2" width="410" alt="Lineup: arrange your PS5 home screen with the controller" /></a>
-  <a href="https://github.com/bps2414/feathertune"><img src="assets/tile-feathertune.svg?v=2" width="410" alt="Feathertune: your music, as a real 3 MB Windows app" /></a>
+  <a href="https://github.com/bps2414/lineup"><img src="assets/tile-lineup.svg?v=3" width="272" alt="Lineup: arrange your PS5 home screen with the controller" /></a>
+  <a href="https://github.com/bps2414/feathertune"><img src="assets/tile-feathertune.svg?v=3" width="272" alt="Feathertune: your music, as a real 3 MB Windows app" /></a>
+  <a href="https://github.com/bps2414/glint"><img src="assets/tile-glint.svg?v=3" width="272" alt="Glint: game clips for Windows, shared to Discord in one click" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/bps2414/beatloom"><img src="assets/tile-beatloom.svg?v=2" width="272" alt="Beatloom: any song in, a playable Beat Saber map out" /></a>
-  <a href="https://github.com/bps2414/memcard"><img src="assets/tile-memcard.svg?v=2" width="272" alt="Memcard: versioned PS5 save backups on your server" /></a>
-  <a href="https://github.com/bps2414/visor-ps5"><img src="assets/tile-visor.svg?v=2" width="272" alt="Visor: your Quest 2 on the TV, straight from the PS5" /></a>
+  <a href="https://github.com/bps2414/beatloom"><img src="assets/tile-beatloom.svg?v=3" width="200" alt="Beatloom: any song in, a playable Beat Saber map out" /></a>
+  <a href="https://github.com/bps2414/memcard"><img src="assets/tile-memcard.svg?v=3" width="200" alt="Memcard: versioned PS5 save backups on your server" /></a>
+  <a href="https://github.com/bps2414/visor-ps5"><img src="assets/tile-visor.svg?v=3" width="200" alt="Visor: your Quest 2 on the TV, straight from the PS5" /></a>
 </p>
 
 <p align="center"><sub>If one of these helped you, a ★ on its repo is the best thanks.</sub></p>
